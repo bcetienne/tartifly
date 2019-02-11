@@ -83,18 +83,14 @@
                 <div class="title m-b-md">
                     Tartifly
                 </div>
-                <img src="http://www.andreclaude.fr/web/wp-content/uploads/2015/12/reblochon.jpg" alt="fromage">
-                <img src="http://www.sav.org/images/rebmange.gif" alt="old">
-
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                        <a href="{{ url('about') }}">À propos</a>
+                        <a href="{{ url('messages') }}">Messages</a>
+                        <a href="{{ url('travels') }}">Voyages</a>
+                        <a href="{{ url('administration') }}">Administration</a>
                 </div>
+                <img src="http://www.andreclaude.fr/web/wp-content/uploads/2015/12/reblochon.jpg" alt="fromage">
+                
             </div>
         </div>
     </body>

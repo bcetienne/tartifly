@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('about', function() {
+    return view('about');
+});
+
+Route::get('messages', 'MessagesController@index');
+Route::get('message/{id?}', 'MessagesController@showMessage');
+
+Route::get('travels', 'TravelController@index');
+Route::get('travel/{id?}', 'TravelController@showTravel');
+
+Route::get('administration', function() {
+    return 'Page d\'administration';
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
