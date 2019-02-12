@@ -19,11 +19,11 @@ Route::get('about', function() {
     return view('about');
 });
 
-Route::get('messages', 'MessagesController@index');
-Route::get('message/{id?}', 'MessagesController@showMessage');
+Route::get('messages', 'MessagesController@index')->name('allMessages');
+Route::get('message/{id?}', 'MessagesController@showMessage')->name('oneMessage');
 
-Route::get('travels', 'TravelController@index');
-Route::get('travel/{id?}', 'TravelController@showTravel');
+Route::get('travels', 'TravelController@index')->name('allTravels');
+Route::get('travel/{id?}', 'TravelController@showTravel')->name('oneTravel');
 
 Route::get('administration', function() {
     return 'Page d\'administration';
