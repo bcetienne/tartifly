@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class TravelController extends Controller
 {
     public function index() {
-        return view('travels');
+        $travels = DB::table('travels')->get();
+        return view('travels', ['travels' => $travels]);
     }
 
     public function showTravel($id) {
-        return view('travels', ['id' => $id]);
+        $travel = DB::table('travels')->where('id', $id)->first();
+        return view('travels', ['travel' => $travel]);
     }
 }
