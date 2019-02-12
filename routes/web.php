@@ -24,10 +24,9 @@ Route::get('message/{id?}', 'MessagesController@showMessage')->name('oneMessage'
 
 Route::get('travels', 'TravelController@index')->name('allTravels');
 Route::get('travel/{id?}', 'TravelController@showTravel')->name('oneTravel');
+Route::post('travel/create', 'TravelController@create')->name('createTravel');
 
-Route::get('administration', function() {
-    return 'Page d\'administration';
-});
+Route::get('administration', 'AdminController@index')->name('homeAdmin');
 
 Auth::routes();
 
