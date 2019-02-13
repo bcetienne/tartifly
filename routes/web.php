@@ -25,8 +25,13 @@ Route::get('message/{id?}', 'MessagesController@showMessage')->name('oneMessage'
 Route::get('travels', 'TravelController@index')->name('allTravels');
 Route::get('travel/{id?}', 'TravelController@showTravel')->name('oneTravel');
 Route::post('travel/create', 'TravelController@create')->name('createTravel');
+Route::get('travel/update/{id}', 'TravelController@showUpdateForm')->name('showUpdateForm');
+Route::put('travel/update', 'TravelController@update')->name('updateTravel');
+Route::get('travel/delete/{id}', 'TravelController@delete')->name('deleteTravel');
 
 Route::get('administration', 'AdminController@index')->name('homeAdmin');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Auth::routes();
 

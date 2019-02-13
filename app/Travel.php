@@ -15,6 +15,7 @@ class Travel extends Model
         'cost',
         'photo',
         'description',
-        'dispo'
+        'dispo',
+        'user_id'
     ];
 }

@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('logout') }}">Se déconnecter</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Se connecter</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">S'enregistrer</a>
                         @endif
                     @endauth
                 </div>
@@ -84,10 +84,12 @@
                     Tartifly
                 </div>
                 <div class="links">
-                        <a href="{{ url('about') }}">À propos</a>
-                        <a href="{{ url('messages') }}">Messages</a>
-                        <a href="{{ url('travels') }}">Voyages</a>
+                    <a href="{{ url('about') }}">À propos</a>
+                    <a href="{{ url('messages') }}">Messages</a>
+                    <a href="{{ url('travels') }}">Voyages</a>
+                    @auth
                         <a href="{{ url('administration') }}">Administration</a>
+                    @endauth
                 </div>
                 <img src="http://www.andreclaude.fr/web/wp-content/uploads/2015/12/reblochon.jpg" alt="fromage">
                 

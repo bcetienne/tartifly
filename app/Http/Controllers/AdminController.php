@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\View;
 class AdminController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     var_dump($this->middleware('admin'));die;
-    //     $this->middleware('admin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('checkAdmin');
+    }
 
     public function index() {
         return view('admin');

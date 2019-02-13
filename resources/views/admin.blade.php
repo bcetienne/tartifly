@@ -45,6 +45,15 @@
       <div class="btn">
         <input type="submit" value="Envoyer" style="border:0; background: transparent; color: white;">
       </div>
+      @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+      @endif
     {{ Form::close() }}
   </div>
 

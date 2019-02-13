@@ -24,6 +24,13 @@ class CreateTravelsTable extends Migration
             $table->string('photo');
             $table->string('description');
             $table->boolean('dispo');
+            $table->unsignedInteger('user_id');
+            $table->date('updated_at');
+            $table->date('created_at');
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
